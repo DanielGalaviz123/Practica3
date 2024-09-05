@@ -20,7 +20,7 @@ public class Practica3 {
             biblioteca.mostrarLibros();
     
             // Buscar un libro por su titulo 
-            String tituloBuscado = "1984"; // Puedes cambiar esto a cualquier titulo que desees buscar
+            String tituloBuscado = "Jujutsu Kaisen"; // Puedes cambiar esto a cualquier titulo que desees buscar
             System.out.println("\nBuscando el libro con titulo: " + tituloBuscado);
             Libro libroEncontrado = biblioteca.buscarLibroPorTitulo(tituloBuscado);
     
