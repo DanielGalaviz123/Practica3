@@ -20,16 +20,16 @@ public class Practica3 {
             biblioteca.mostrarLibros();
     
             // Buscar un libro por su titulo 
-            String tituloBuscado = "1984"; // Puedes cambiar esto a cualquier título que desees buscar
-            System.out.println("\nBuscando el libro con título: " + tituloBuscado);
+            String tituloBuscado = "1984"; // Puedes cambiar esto a cualquier titulo que desees buscar
+            System.out.println("\nBuscando el libro con titulo: " + tituloBuscado);
             Libro libroEncontrado = biblioteca.buscarLibroPorTitulo(tituloBuscado);
     
             // Verificar si el libro fue encontrado
             if (libroEncontrado != null) {
-                System.out.println("\nInformación del libro encontrado:");
+                System.out.println("\nInformacion del libro encontrado:");
                 libroEncontrado.mostrarInformacion();
             } else {
-                System.out.println("No se encontró ningún libro con el título ingresado.");
+                System.out.println("No se encontro ningun libro con el titulo ingresado.");
             }
         }
     }

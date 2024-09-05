@@ -14,15 +14,15 @@ public class Libro {
     }
 
     public void mostrarInformacion() {
-        System.out.println("Título: " + this.titulo);
+        System.out.println("Titulo: " + this.titulo);
         System.out.println("Autor: " + this.autor);
-        System.out.println("Año de publicación: " + this.añoPublicacion);
-        System.out.println("Número ISBN: " + this.isbn);
+        System.out.println("Año de publicacion: " + this.añoPublicacion);
+        System.out.println("Numero ISBN: " + this.isbn);
     }
 
     public boolean esAntiguo() {
         int añoActual = Year.now().getValue(); // Obtener el año actual
-        return (añoActual - this.añoPublicacion) > 20; // Comprobar si el libro tiene más de 20 años
+        return (añoActual - this.añoPublicacion) > 20; // Comprobar si el libro tiene mas de 20 años
     }
 
     public String getTitulo() {

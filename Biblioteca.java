@@ -13,7 +13,7 @@ public class Biblioteca {
 
     public void mostrarLibros() {
         if (libros.isEmpty()) {
-            System.out.println("La biblioteca está vacía.");
+            System.out.println("La biblioteca esta vacia.");
         } else {
             for (Libro libro : libros) {
                 libro.mostrarInformacion();
@@ -28,7 +28,7 @@ public class Biblioteca {
                 return libro; // Retorna el libro si se encuentra
             }
         }
-        System.out.println("El libro con el título \"" + titulo + "\" no se encontró.");
+        System.out.println("El libro con el titulo \"" + titulo + "\" no se encontro.");
         return null; // Retorna null si no se encuentra el libro
     }
 }
