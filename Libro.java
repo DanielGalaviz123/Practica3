@@ -2,29 +2,25 @@ import java.time.Year;
 
 public class Libro {
     private String titulo;
-    private String autor;
+    private Autor autor;
     private int añoPublicacion;
     private String isbn;
+    private boolean prestado;
 
-    public Libro(String titulo, String autor, int añoPublicacion, String isbn) {
+    public Libro(String titulo, Autor autor, int añoPublicacion, String isbn, boolean prestado) {
         this.titulo = titulo;
         this.autor = autor;
         this.añoPublicacion = añoPublicacion;
         this.isbn = isbn;
-    }
-
-    public void mostrarInformacion() {
-        System.out.println("Titulo: " + this.titulo);
-        System.out.println("Autor: " + this.autor);
-        System.out.println("Año de publicacion: " + this.añoPublicacion);
-        System.out.println("Numero ISBN: " + this.isbn);
+        this.prestado = prestado;
     }
 
     public boolean esAntiguo() {
-        int añoActual = Year.now().getValue(); // Obtener el año actual
-        return (añoActual - this.añoPublicacion) > 20; // Comprobar si el libro tiene mas de 20 años
+        int añoActual = Year.now().getValue();
+        return (añoActual - this.añoPublicacion) > 20;
     }
 
+    // Getters y Setters
     public String getTitulo() {
         return titulo;
     }
@@ -33,11 +29,11 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public String getAutor() {
+    public Autor getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(Autor autor) {
         this.autor = autor;
     }
 
@@ -55,5 +51,13 @@ public class Libro {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public boolean isPrestado() {
+        return prestado;
+    }
+
+    public void setPrestado(boolean prestado) {
+        this.prestado = prestado;
     }
 }
